@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html{
+    padding:10px;
+}
+.box{
+    width: 600px;
+    border: 5px solid black;
+    margin-left: 30%;
+    box-shadow: 5px 5px 25px red; 
+    background-color: lightgray;
+    text-align:center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 2px 5px red;
+    padding:10px;
+}
+h2{
+    margin:5px;
+}
+form label{
+    margin-right:5px;
+}
+input{
+    margin-right:5px;
+}
+input:focus{
+    background:lightgrey;
+}
+form ul li{
+    list-style: none;
+    display: flex;
+    align-items:column;  
+    padding: 5px;
+}
+form ul{
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    box-shadow: 0px 2px 5px red;
+    padding:5px;
+}
+.cargo{
+    width: 99%;
+    margin:1px;  
+    border-bottom: 2px solid black;
+    box-shadow: 0px 2px 5px red;
+    padding:5px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    padding:10px;
+}
+th, td{
+    border: 2px solid black;
+    width: 100%;
+    box-shadow:0px 2px 5px red;
+    padding:5px;
+}
+td:first-child{width:100px}
+td:first-child + td{width:100px;}
+td:first-child + td + td {width:300px;}
+table input{
+    margin: 1px;
+    width: 95%;
+}
+footer{
+    margin: 5px;
+    padding: 5px;
+}
+footer div > p{
+    background-color:black;
+    color:red;
+    margin-top:5px;
+    box-shadow:0px 2px 15px red;
+    padding: 5px;
+}
+.botao{
+    font-size:1.2em;
+    background: black;
+    border:0;
+    margin:5px;
+    color:white;
+    padding:5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+    transition-duration: 0.4s;
+    width:100px;
+    border-radius:45%;
+}
+.botao:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

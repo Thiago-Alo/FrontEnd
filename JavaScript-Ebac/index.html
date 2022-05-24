@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <fieldset>
+        <legend>Ebac Formulario JS</legend>
+        <div class="container">
+
+            <div class="mensagem"></div>
+
+            <!--<form action="" id="formulario-01">
+                <h2>Calculo de media</h2>
+                <p>Notas de 0 a 10</p>
+                <input type="text" class="numero" name="n1" placeholder="Digite um numero">
+                <input type="text" class="numero" name="n2" placeholder="Digite um numero">
+                <input type="text" class="numero" name="n3" placeholder="Digite um numero">
+                <input type="text" class="numero" name="n4" placeholder="Digite um numero">
+                <button type="submit">Enviar</button>
+            </form>-->
+            <form action="" id="formulario-02">
+                <h2>LIMITE O CAMPO UF, PARA RECEBER APENAS 2 DIGITOS</h2>
+                <!--<input type="text" class="obrigatorio" name=" nome" placeholder="Digite seu nome">
+                <input type="text" class="email" name="email" placeholder="Digite seu email">
+                <input type="text" name="telefone" placeholder="Digite seu telefone">
+                <input type="text" class="numero" name=" telefone" placeholder="Digite seu cep">
+                <input type="text" class="obrigatorio" name="cidade" placeholder="Digite sua cidade">-->
+
+                
+
+                <input type="text" class="obrigatorio uf" name="uf" maxlength="2" placeholder="Digite sua UF, EX: RJ">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </fieldset>
+    <div id="resultado">
+        
+    </div>
+
+
+    <script type="text/javascript"  src="script.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+@import url("tabelas.css");
+html{
+    background: linear-gradient(to left, black 20%, rgb(50, 101, 121));
+    color:rgb(255, 234, 113);
+    text-align:center;
+    width:99%;
+    margin-top:5px;
+}
+header{
+    margin-bottom:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+}
+header h1{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 35px;
+}
+a{
+    text-decoration: none;
+    padding:10px;
+    color: skyblue;
+}
+a:hover{
+    color:black;
+    background-color:rgb(255, 234, 113);
+    border-radius:50px;
+    font-size:20px;
+}
+h2{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;
+}
+p{
+    font-size:20px;
+    text-align:justify;
+    text-indent:30px;
+    margin:2%;
+    color:rgb(248, 248, 248);
+}
+#img-top-left{
+    border: 1px solid transparent;
+    border-radius:50%;
+}
+ul, ol, dl{
+    color: skyblue;
+}
+#main-list{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    height:300px;
+}
+#foot-list{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    border: 5px outset white;
+    width: 50%;
+    font-size: 20px;
+    margin:auto;
+    padding: 5px 10px 5px 10px;
+}
+.list1{
+    width: 25%;
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:space-between;
+    align-items:center;
+    border: 5px dotted black;
+    padding: 10px;
+    padding-left:5%;
+    border-radius: 15px 0px 0px 15px;
+    height:200px;
+    border-right:none;
+}
+.list1 li:nth-child(even){
+    color:yellow;
+    list-style-type:lower-roman;
+}
+.list1 li:nth-child(odd){
+    color:skyblue;
+    list-style-type:lower-greek;
+}
+
+.list2{
+    border: 5px dotted rgb(255, 234, 113) ;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:0px 5% 0px 5%;
+    width:25%;
+    height:200px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-left:none;
+    border-right:none;
+}
+.list2 li:nth-child(odd){
+    color: white;
+    list-style-type:upper-latin;
+}
+.list3{
+    width:25%;
+    border: 5px dotted rgb(50, 101, 121);
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:baseline;
+    padding:10px;
+    align-items:center;
+    height:200px;
+    margin-right:5%;
+    border-radius: 0px 15px 15px 0px;
+    border-left:none;
+}
+.list3 dd{
+    color:white;
+}
+#img1{
+    border-radius:40%;
+    height:120px;
+    margin-left:5px;
+}
+p{
+    text-align:center;
+}
+label, input{
+    text-align:center;
+    height:15px;
+    width:200px;
+    margin:3px;
+    padding:3px;
+}
+select:hover{
+    background-color:rgb(50, 101, 121);
+    color:rgb(255, 234, 113);
+}
+.btn1{
+    margin:10px;
+    background-color:transparent;
+    color:rgb(255, 234, 113);
+    height:50px;
+    border-radius:70%;
+}
+.btn1>a:hover{
+    background-color:transparent;
+    color:white;
+    font-size:15px;
+}
+.btn2{
+    background-color:black;
+    height:50px;
+    width:100px;
+    color:rgb(255, 234, 113);
+    font-size:20px;
+    border-radius:70%;
+}
+.btn2:active{
+    background-color:black;
+    color:skyblue;
+}
+footer{
+    margin-top:20px;
+}
+.check{
+    display:flex;
+    flex-direction:column;
+}
+#desafio{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    height:350px;
+    background-color: rgb(41, 40, 40);
+    margin-top:10px;
+    overflow:hidden;
+}
+.desafio1{
+    display:flex;
+    flex-direction:column;
+    justify-content:auto;
+    color:rgb(50, 101, 121);
+    font-size:12px;
+    background-color:rgb(223, 196, 217);
+    align-items:center;
+    height:100%;
+}
+.desafio1 input{
+    width:75%;
+    font-size:12px;
+}
+.btn3{
+    height:50px;
+    width:100px;
+    color:black;
+    font-size:20px;
+    border-radius:70%;
+}
+.btn3:active{
+    background-color:black;
+    color:skyblue;
+}
+#box-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:5px;
+}

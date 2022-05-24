@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="box">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=devide-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>PHOENIX RH</title>
+    </head>
+    <body>
+        <strong>
+        <header>
+            <img src="img/logo.jpg" height="100px">
+            <h1>Formulário de candidato a emprego - PHOENIX RH</h1>
+            <img src="img/logo.jpg" height="100px">
+        </header>
+        <h2>Por favor, preencha todos os campos</h2>
+        <form method="post"> 
+            <ul>
+                <li>
+                    <label>Nome:</label>
+                    <input type="text" name="nome" id="nome" required placeholder="Nome completo"></li>
+                <li>
+                    <label>Data do preenchimento:</label>
+                    <input type="datetime-local" name="data" id="data"></li>
+                <li>
+                    <label>Email:</label>
+                    <input type="email" name="email" id="email" required="required" placeholder="Email">
+                </li>
+                <li>
+                    <label for="date">Data de nacimento:</label>
+                    <input type="date" name="date" id="date" required></li>
+                <li>
+                    <label>Sexo:</label>
+                    <input type="radio" name="sexo" id="sexo">Homem
+                    <input type="radio" name="sexo" id="sexo">Mulher
+                    <input type="radio" name="sexo" id="sexo">Não responder</li>
+                <li>
+                    <label for="ende">Endereço:</label>
+                    <input type="text" name="ende" id="ende" placeholder="Endereço completo"></li>
+                <li>
+                    <label for="civil">Estado civil:</label>
+                    <select>
+                        <option>Solteiro</option>
+                        <option>Casado</option>
+                        <option>Separado</option>
+                    </select></li>
+                <li>
+                    <label for="time">Periodo a que se candidata:</label>
+                <input type="checkbox" name="time" id="time">Integral
+                <p>&nbsp; e/ou &nbsp;</p>
+                <input type="checkbox" name="time" id="time">Pacial</li>
+            </ul>
+       
+        <section>
+            <h2>Cargo a qual se candidata?</h2>
+            <input class="cargo" type="text" required>
+            <div class="cargo">
+                <label for="money">Salario pretendido R$</label>
+                <input type="number" step="10.0" min="1100" name="money" id="money" placeholder="Salario">
+            </div>
+        </section>
+        <section>
+            <h2>ÚLTIMAS EXPERIÊNCIAS</h2>
+            <table>
+                <tr>
+                    <td>EMPRESA</td>
+                    <td>CARGO</td>
+                    <td>FUNÇÕES</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="emp1"></td>
+                    <td><input type="text" id="cargo1"></td>
+                    <td><input type="text" id="desc1"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="emp2"></td>
+                    <td><input type="text" id="cargo2"></td>
+                    <td><input type="text" id="desc2"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="emp3"></td>
+                    <td><input type="text" id="cargo3"></td>
+                    <td><input type="text" id="desc3"></td>
+                </tr>
+            </table>
+        </section>
+        <section class="cargo">
+            <h2>FORMAÇÃO</h2>
+            <label for="school">Escolaridade:</label>
+            <input type="radio" name="school" id="school">Ensino médio
+            <input type="radio" name="school" id="school">Segundo Grau
+            <input type="radio" name="school" id="school">Ensino Superior<br>
+            <label for="instituicao">Em qual instituição de ensino?</label>
+            <input type="text" name="instituicao" id="instituicao" placeholder="Nome da instituição de ensino">
+        </section>
+    </body>
+    <footer>
+        <p>Autorizo o tratamento dos meus dados pela empresa PHOENIX RH</p><br>
+        <input type="radio" name="auto" id="auto">Autorizo
+        <input type="radio" name="auto" id="auto">Não autorizo
+        <br><br>
+        <button class="botao" type="submit">Enviar</button>
+        <br><br>
+    </form>
+        <div>
+            <p>Criado por Thiago Alô &copy</p>
+        </div>  
+    </footer></strong>
+
+</html>

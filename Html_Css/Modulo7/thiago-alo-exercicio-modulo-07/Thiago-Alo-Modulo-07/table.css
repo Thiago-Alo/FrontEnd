@@ -1,0 +1,68 @@
+table{
+    text-align:center;
+    background-color:white;
+    width: 90%;
+    height: 300px;
+    margin-left:5%;
+    margin-top: 50px;
+    border: 2px solid lightgrey;
+    box-shadow: 5px 5px 5px grey;
+    padding:10px;
+}
+
+thead{
+    color:white;
+    background-color:rgb(7, 7, 145);
+}
+thead tr td{
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 5;
+}
+thead tr th:first-child{
+    width: 50px;
+}
+th{
+    color:white;
+    box-sizing: 500px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+}
+table td{
+    text-align: center;
+    vertical-align:middle;
+}
+table tr td:first-child{
+    text-align:center;
+    font-weight:bold;
+}
+tbody td{
+    width: 100px;
+    height: 50px;
+}
+table tbody tr:nth-child(odd){
+    background-color:lightgrey;
+}
+tfoot{
+    font-weight:bold;
+    background-color:lightgrey;
+    height: 50px;
+}
+.bold{
+    font-weight:bold;
+}
+table tbody tr td:hover {
+    background:linear-gradient(to left,black, gold 95% );
+}
+table tfoot tr:hover{
+    background:linear-gradient(gold,black);
+}
+table thead th:active{
+    background:linear-gradient(gold,black);
+    font-family: 'Pinyon Script', cursive;
+}
+
+
+
+

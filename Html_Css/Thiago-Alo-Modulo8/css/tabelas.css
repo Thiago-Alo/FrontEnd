@@ -1,0 +1,27 @@
+
+
+table {
+	color:red;
+	background: #ffffff;
+	width: 100%;
+	margin:10px 0px 10px 0px;
+}
+table thead tr {
+	color:black;
+	vertical-align:middle;
+}
+table th,
+table td {
+	padding: 1rem;
+	font-size: 1.6rem;
+	vertical-align: middle;
+	border: 3px solid rgb(50, 101, 121);
+}
+table th:hover{
+	background-color:black;
+	color:skyblue;
+}
+table td:active{
+	background-color:rgb(50, 101, 121);
+	color:rgb(255, 234, 113);
+}

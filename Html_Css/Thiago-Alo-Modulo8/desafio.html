@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Thiago Alô - Desafio</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Zen+Antique&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/modulo-08.css">
+	</head>
+<body>
+    <header>
+        <img id="img1" src="images/coffee-square-sm.jpg"  alt="Error" aria-placeholder="Error" title="Desafio do café">
+        <h1>&larrlp;&nbsp;Desafio do Café&nbsp;&rarrlp;</h1>
+        <nav>
+            <a href="01-introducao.html">Introdução</a>
+            <a href="02-listas-e-links.html">Listas e Links</a>
+            <a href="04-tabelas.html">Tabelas</a>
+            <a href="06-formularios.html">Formulario</a>
+        </nav>
+    </header>
+    <h2>Gostaria de marcar uma reunião conosco? Que tal um café <img src="images/cafe-removebg-preview.png"></h2>
+    <main id="desafio">
+        <section>
+            <picture>
+                <source media="(min-width: 700px)" srcset="images/sem-cafe-nao-ha-trabalho.webp">
+                <img srcset="images/sem-cafe-nao-ha-trabalho-gr.webp" alt="Café">
+            </picture>
+        </section>
+        <article>
+            <h2>Nossa Missão</h2>
+            <p>Disponibilizar sempre aos nossos clientes as 
+                melhores soluções no ramo da
+                 Informática, bem como no campo da Assistência,
+                 orcionando-lhes um aumento da produtividade e a 
+                 redução de custos no parque informático.</p>
+            <h2>Nossos Valores</h2>
+            <p>Honestidade e Ética no relacionamento com clientes, fornecedores e colaboradores; 
+                Rigor no exercício da atividade; Dedicação para oferecer sempre as melhores soluções aos clientes; 
+                Respeito e Dignidade , reconhecendo os diferentes valores individuais e culturais, 
+                dando sempre a maior atenção a cada um deles, independentemente do nível de instrução,
+                 sexo, raça, posição hierárquica, política, financeira e social. </p>
+        </article>
+        <form>
+            <div class="desafio1">
+                <label>Qual motivo da reunião?</label>
+                <select>
+                    <option value="meeting">Candidato a oportunidades</option>
+                    <option value="meeting">Contratar nossos serviços</option>
+                    <option value="meeting">Parceria comercial</option>
+                </select>
+                <label>Quando devemos contactar?</label>
+                    Manhã 09h-12h<input type="checkbox" value="meeting">
+                    Tarde 13h-16h<input type="checkbox" value="meeting">
+                <label>Nome:</label>
+                    <select>
+                        <option value="sex">Sr.</option>
+                        <option value="sex">Sra.</option>
+                    </select>
+                    <input type="text" name="nome" id="nome" placeholder="Nome e Apelido"  required>
+                <label>Tel para contato:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Tel" required>
+                <label>Email:</label>
+                    <input type="email" name="emaill" id="email" placeholder="Email" required>
+            </div>
+    </main>
+</body>
+<footer id="box-footer">
+        <h2>Criado pro Thiago Alô &copy</h2>
+        <button class="btn3" type="submit" value="Enviar">Enviar</button>
+    </form>
+</footer>
+</html>

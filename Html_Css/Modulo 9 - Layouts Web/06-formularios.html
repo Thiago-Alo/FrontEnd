@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Thiago Alô - Formulário de contato</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Zen+Antique&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/modulo-08.css">
+	</head>
+	<body>
+		<header>
+			<img id="img1" src="images/form.jpg" alt="Erro" aria-placeholder="Formulario" title="Formulario"> 
+			<h1>&uarr;&nbsp; Thiago Alô - Formulário de contato &nbsp;&darr;</h1>
+			<nav>
+				<a href="01-introducao.html">Introdução</a>
+				<a href="02-listas-e-links.html">Listas e Links</a>
+				<a href="04-tabelas.html">Tabelas</a>
+				<a href="06-formularios.html">Formulario</a>
+			</nav>
+		</header>
+		<h2>Contato</h2>
+		<section>
+			<article>
+				<p>Preencha os campos abaixo</p>
+				<form method="post">
+					<div>
+						<label>Nome: </label>
+						<input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+					</div>
+					<div>
+						<label>E-mail: </label>
+						<input type="email" name="email" id="email" placeholder="Digite seu email" required>
+					</div>
+					<div>
+						<label>Mensagem: </label>
+						<textarea name="mensagem" id="mensagem" rows="5"></textarea>
+					</div>
+					<br>
+					<div>
+						<label>Quais linguagens você domina?</label>
+							<input type="checkbox" name="linguagens" value="html"> HTML
+							<input type="checkbox" name="linguagens" value="css"> CSS
+							<input type="checkbox" name="linguagens" value="js"> JAVASCRIPT
+					</div>
+					<br>
+					<div>
+						<label>Qual a sua cor favorita?</label>
+						<select>
+							<option value="Azul">Azul</option>
+							<option value="Verde">Verde</option>
+							<option value="Vermelho" selected>Vermelho</option>
+						</select>
+					</div>
+					<br>
+					<div>
+						<button class="btn1" type="submit"><a href="desafio.html">Agende um café conosco</a></button>
+						<button class="btn2" type="submit">Enviar</button>
+					</div>
+				</form>
+			</article>
+		</section>
+		<footer>
+			<h2>Criado pro Thiago Alô &#8623;</h2>
+		</footer>
+		
+	</body>
+</html>

@@ -1,0 +1,229 @@
+html {
+    background-color: #f0f2f5;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+header{
+    display:block;
+    text-align: center;
+    width:auto;
+}
+header h1{
+    padding:10px;
+    font-size:30px;
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Zen Antique', serif;
+    transition: 0.5s;
+}
+h1:hover{
+    text-shadow: 0px 0px 6px yellow, 0px -6px 6px red;
+    box-shadow: 5px 5px 5px black;
+    background-color: black;
+    font-size:50px;
+}
+header p{
+    font-size:18px;
+    font-family:inherit;
+    padding:10px;
+}
+form{
+    display:flex;
+    flex-direction:column;
+}
+form input, label, button, select{
+    margin:5px;
+    text-align:center;
+}
+form input{
+    padding:10px;
+    color:black;
+    font-size:15px;
+}
+form select{
+    width:100px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    
+}
+form button{
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#166fe5;
+    font-size:20px;
+    height:48px;
+    border:none;
+    border-radius:6px;
+    margin-top:15px;
+    color:white;
+    font-family: inherit;
+    transition: 0.3s;
+}
+button:active{
+    text-shadow: 0px 0px 4px yellow, 0px -4px 4px red;
+    box-shadow: 5px 5px 5px black;
+    background-color:#f0f2f5;
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Zen Antique', serif;
+    font-size:30px;
+    color:black;
+    height:auto;
+    background-color:black;
+}
+.box-form{
+    width: 300px;
+    margin-left:auto;
+    margin-right:auto;
+    border: 2px solid rgb(160, 160, 160);
+    padding:30px;
+    height:auto;
+    border-radius:3%;
+    box-shadow: 10px 10px 5px black;
+}
+.btn-back{
+    text-decoration: none;
+    text-align: center;
+    width:50px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#166fe5;
+    font-size:15px;
+    border:none;
+    border-radius:6px;
+    margin-top:15px;
+    color:white;
+    font-family: inherit;
+    padding:10px;
+}
+footer{
+    text-align: center;
+    color:#166fe5;
+    font-size:7px;
+}
+.plano{
+    text-shadow: 0px 0px 6px yellow, 0px -6px 6px red;
+    box-shadow: 5px 5px 5px black;
+    background-color: black;
+    font-size:30px;
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Zen Antique', serif;
+    margin-bottom:5px;
+    color:#f0f2f5;
+}
+.plano h1{
+    font-size:50px;
+}
+.plano img{
+    filter:invert(100%);
+}
+.box-plans div{
+    display:inline-block;
+    width:30%;
+    margin:5px;
+    height:auto;
+    padding:10px;
+    filter:grayscale(100%);
+    text-align: center;
+
+}
+.light li{
+    margin:3.2px;
+}
+.light:hover{
+    filter:none;
+    background:linear-gradient(to top,#f0f2f5 45%, orange);
+    
+}
+.box-plans h2{
+    text-align:center;
+    font-size:25px;
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Zen Antique', serif;
+    margin-bottom:7px;
+}
+.box-plans p{
+    text-shadow: 0px 0px 6px yellow, 0px -6px 6px red;
+    box-shadow: 5px 5px 5px black;
+    background-color: black;
+    font-size:25px;
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Zen Antique', serif;
+    text-align:center;
+    width:100%;
+    color:#f0f2f5;
+}
+.box-plans h3{
+    margin:10px;
+    text-align:center;
+    font-family: inherit;
+}
+.box-plans li{
+    list-style:disc;
+    padding: 10px;
+}
+.btn-plan{
+    width:100%;
+    max-width:150px;
+    background-color:#166fe5;
+    font-size:20px;
+    height:40px;
+    border:none;
+    border-radius:6px;
+    color:white;
+    font-family: inherit;
+    transition: 0.3s;
+}
+.btn-plan button:active{
+    text-shadow: 0px 0px 4px yellow, 0px -4px 4px red;
+    background-color:#f0f2f5;
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Zen Antique', serif;
+    font-size:40px;
+    color:black;
+    background-color:black;
+}
+.definition-plan:hover{
+    filter:none;
+    background:linear-gradient(to top,#f0f2f5 45%, rgb(23, 110, 74));
+}   
+.monster-plan:hover{
+    filter:none;
+    background:linear-gradient(to top,#f0f2f5 45%, rgb(58, 58, 179) )
+}
+.video-acad h2{
+    font-size:40px;
+    margin: 10px;
+    border-top: 3px solid black;
+    padding:20px;
+}
+/*@media (min-width:1001px){
+    .light li{
+        padding:12.5px;
+    }
+    .monster-plan li{
+        padding:11px;
+    }
+}*/
+@media (max-width:1000px){
+    .box-plans div{
+        width:auto;
+        margin-left:auto;
+        margin-right:auto;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .light{
+        border-bottom:3px solid black;
+    }
+    .definition-plan{
+        border-bottom:3px solid black;
+    }
+    /*.light li{
+        padding:12.5px;
+    }
+    .monster-plan li{
+        padding:11px;
+    }*/
+}
