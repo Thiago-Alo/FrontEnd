@@ -1,151 +1,86 @@
-function calcularMedia( notas ) {
+const form = document.getElementById("form");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const passwordConfirmation = document.getElementById("password-confirmation");
 
-    let soma = 0;
-    for ( c = 0; c < notas.length; c++){
-        soma += notas[c];
-    }
-    media = soma / notas.length;
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    return media;
-    }
+  checkInputs();
+});
 
-    function aprovacao( notas ){
+function checkInputs() {
+  const usernameValue = username.value;
+  const emailValue = email.value;
+  const passwordValue = password.value;
+  const passwordConfirmationValue = passwordConfirmation.value;
 
-    let media = calcularMedia( notas ); //escopo local
+  if (usernameValue === "") {
+    setErrorFor(username, "O nome de usuário é obrigatório.");
+  } else {
+    setSuccessFor(username);
+  }
 
-    let condicao  = media >= 7 ? "Aprovado" : "Reprovado";
+  if (emailValue === "") {
+    setErrorFor(email, "O email é obrigatório.");
+  } else if (!checkEmail(emailValue)) {
+    setErrorFor(email, "Por favor, insira um email válido.");
+  } else {
+    setSuccessFor(email);
+  }
 
-    return "Média: "+media + " - " +condicao;
-    }
+  if (passwordValue === "") {
+    setErrorFor(password, "A senha é obrigatória.");
+  } else if (passwordValue.length < 7) {
+    setErrorFor(password, "A senha precisa ter no mínimo 7 caracteres.");
+  } else {
+    setSuccessFor(password);
+  }
 
-    console.log("Média = "+calcularMedia([4, 8]))
-    console.log( aprovacao( calcularMedia([8, 5])))
+  if (passwordConfirmationValue === "") {
+    setErrorFor(passwordConfirmation, "A confirmação de senha é obrigatória.");
+  } else if (passwordConfirmationValue !== passwordValue) {
+    setErrorFor(passwordConfirmation, "As senhas não conferem.");
+  } else {
+    setSuccessFor(passwordConfirmation);
+  }
 
-    console.log("Média = "+calcularMedia([8, 8, 10, 20, 40, 5]))
-    console.log( aprovacao( calcularMedia([8, 8, 10, 20, 40, 5])))
+  const formControls = form.querySelectorAll(".form-control");
 
-    console.log(aprovacao([8, 8, 7, 10, 3, 2, 9]))
+  const formIsValid = [...formControls].every((formControl) => {
+    return formControl.className === "form-control success";
+  });
 
-    console.log(aprovacao([3, 10, 6]))
-
-//Função recursiva
-
-function contagemRegressiva(numero){
-    console.log(numero);
-    numero--;
-    if(numero > 0){
-        contagemRegressiva(numero);
-    }
-}
-    contagemRegressiva(10);
-
-    /*
-        Formulario envio de dados para calculo da media
-    */
-   const formulario1 = document.getElementById('formulario-01')
-   if(formulario1)
-    formulario1.addEventListener("submit", function(evento){
-        //Impede o envio do formulario
-        evento.preventDefault();
-        evento.stopPropagation();
-
-        if(this.getAttribute('class').match(/erro/)){
-            return false;
-        }
-
-        //Este metodo FormData() captura os dados do formulario
-        
-        let dados = new FormData(this);
-
-        let notas = [];
-
-        for(let key of dados.keys()){   
-
-            let numero = dados.get(key).match(/\d*/) ? Number(dados.get(key)) : 0;//converte para um numero
-            
-            if(!isNaN(numero)){ //verifica o tipo se e numero
-                notas.push(numero)
-            }
-            
-            
-
-            //.push adiciona itens no array
-        }
-        console.log(notas)
-        texto = aprovacao(notas)   
-        
-        document.getElementById('resultado').innerHTML = texto;   
-    });
-
-
-
-    
-function validaCampo(elemento){
-
-    elemento.addEventListener('focusout', function(event){
-
-        event.preventDefault();
-
-        if(this.value == ""){
-            document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento";
-            this.classList.add('erro');
-            this.parentNode.classList.add('erro');
-            return false;
-        }else{
-            document.querySelector('.mensagem').innerHTML = "";
-            this.classList.remove('erro');
-            this.parentNode.classList.remove('erro');
-        }
-    })
+  if (formIsValid) {
+    console.log("O formulário está 100% válido!");
+  }
 }
 
-function validaCampoNumerico(elemento){
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector("small");
 
-    elemento.addEventListener('focusout', function(event){
+  // Adiciona a mensagem de erro
+  small.innerText = message;
 
-        event.preventDefault();
-
-        let numero = this.value.match(/^[\d]5-[\d]3/) ? this.value.replace(/-/,"") : this.value;
-
-        if(numero != "" && numero.match(/[0-9]*/) && numero >= 0 && numero <= 10){
-            //checa condições se esta vazio, se o numero esta entre 0 e 9, se o valor e >= 0 e se o valor e <= 10
-            document.querySelector('.mensagem').innerHTML = "";
-            this.classList.remove('erro');
-            this.parentNode.classList.remove('erro');
-        }else{
-            document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento";
-            this.classList.add('erro');
-            this.parentNode.classList.add('erro');
-            return false;
-            
-        }
-    })
+  // Adiciona a classe de erro
+  formControl.className = "form-control error";
 }
 
-function validaEmail(elemento){
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
 
-    elemento.addEventListener('focusout', function(event){
-
-        event.preventDefault();
-
-        const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
-
-        if(this.value.match(emailValido)){
-            //checa condições se esta vazio, se o numero esta entre 0 e 9, se o valor e >= 0 e se o valor e <= 10
-            document.querySelector('.mensagem').innerHTML = "";
-            this.classList.remove('erro');
-            this.parentNode.classList.remove('erro');
-        }else{
-            document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento";
-            this.classList.add('erro');
-            this.parentNode.classList.add('erro');
-            return false;
-            
-        }
-    });
+  // Adicionar a classe de sucesso
+  formControl.className = "form-control success";
 }
 
-//VALID UF - LIMITA CAMPOS INSERIDOS
+function checkEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+}
+
 const inputUF = document.querySelector("input.uf"),
  countUF = document.querySelector("input.uf"),
  maxLengthUf = input.getAttribute('maxlength');
@@ -156,21 +91,6 @@ input.onkeyup = ()=>{
 
 
 
-let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
-let camposNumericos = document.querySelectorAll('input.numero');
-let camposEmail = document.querySelectorAll('input.email');
-let camposUF = document.querySelectorAll('input.uf');
-
-for(let emFoco of camposObrigatorios){
-    validaCampo(emFoco)
-}
-for(let emFoco of camposNumericos){
-    validaCampoNumerico(emFoco)
-}
-for(let emFoco of camposEmail){
-    validaCampoNumerico(emFoco)
-}
 for(let emFoco of camposUF){
-    validaCampoNumerico(emFoco)
+  validaCampoNumerico(emFoco)
 }
-
