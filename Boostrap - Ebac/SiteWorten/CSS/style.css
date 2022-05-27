@@ -1,0 +1,70 @@
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root{
+    --vermelho:#E41A15;
+    --branco:#fff;
+    --preto:#000;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+header{
+    background-color: var(--vermelho);
+}
+nav{
+    background-color: var(--vermelho);
+}
+.card-text{
+    color: var(--vermelho);
+}
+.carousel h5, .carousel p{
+    background-color: var(--vermelho);
+}
+.carousel-control-next-icon{
+    background-image: url('/IMG/right-arrow-svgrepo-com.svg');
+}
+.carousel-control-prev-icon{
+    background-image: url('/IMG/left-arrow-svgrepo-com.svg');
+}
+.btn{
+    background-color: var(--vermelho);
+    color:var(--branco);
+    border: 1px solid var(--branco);
+}
+.btn:hover{
+    background-color: var(--branco);
+    color:var(--vermelho);
+    border: 1px solid var(--vermelho);
+}
+.form-label{
+    float: left;
+}
+.form-control:focus{
+    border-color:var(--vermelho);
+    outline:0;
+    /*box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);*/
+}
+#main-quem-somos p{
+    text-align: justify;
+}
+footer a{
+    color:var(--branco);
+    border:1px solid var(--branco);
+    padding: 5px;
+    border-radius:50%;
+}
+footer a:hover{
+    color:var(--vermelho);
+    background-color: var(--branco);
+    border:1px solid var(--branco);
+    padding: 5px;
+    border-radius:50%;
+}
+.badge{
+    background-color:var(--vermelho);
+
+}
+footer{
+    background-color:var(--vermelho);
+    color:var(--branco);
+}
