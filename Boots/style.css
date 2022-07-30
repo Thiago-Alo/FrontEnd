@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background: #FFFFFF;
+}
+.back-index{
+    background-image:url('./imgs/bgheader-removebg-preview.png') ;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+.back-sobre{
+    background-image:url('./imgs/casinha.png') ;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+.back-pets{
+    background-image:url('./imgs/pets.png') ;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+.logo{
+    width:50px;
+}
+main .title{
+    font-weight: 800;
+}
+.tiaras-img-text{
+    height:420px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.tiaras-img-text div p{
+    max-height: 400px;
+}
+.img-size{
+    height: 400px;
+    transform: translateX(50%);
+}
+
+@media screen and (max-width:930px) {
+    .img-size{
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width:750px) {
+    .tiaras-img-text{
+        flex-direction: column;
+        margin-bottom:350px;
+    }
+    .img-size{
+        transform: translateX(50%);
+    }
+}
+@media screen and (max-width:530px) {
+    .img-size{
+        transform: translateX(25%);
+    }
+}
